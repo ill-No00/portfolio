@@ -18,41 +18,45 @@ export default function Home() {
       {loading && <LoadingScreen onFinished={() => setLoading(false)} />}
 
       <div
-        className={`flex min-h-screen items-center justify-center bg-black font-sans dark:bg-black transition-opacity duration-700 ${
+        className={`min-h-screen bg-[var(--color-bg)] font-sans transition-opacity duration-700 ${
           loading ? "opacity-0" : "opacity-100"
         }`}
       >
         <Navbar />
-        <main className="w-full">
+
+        <main id="main-content" className="w-full">
+          {/* Decorative grid background — top-left corner */}
           <div
-            className="absolute top-0 left-0 right-[40%] bottom-[40%] z-0 opacity-[0.2] pointer-events-none"
+            aria-hidden="true"
+            className="fixed top-0 left-0 right-[40%] bottom-[40%] z-0 opacity-[0.15] pointer-events-none bg-grid-pattern"
             style={{
-              backgroundImage: `
-                linear-gradient(to right, #d1d5db 1px, transparent 1px),
-                linear-gradient(to bottom, #d1d5db 1px, transparent 1px)
-              `,
-              backgroundSize: "45px 45px",
               WebkitMaskImage:
-                "radial-gradient(ellipse 80% 80% at 0% 0%, #000 50%, transparent 90%)",
+                "radial-gradient(ellipse 80% 80% at 0% 0%, #000 40%, transparent 85%)",
               maskImage:
-                "radial-gradient(ellipse 80% 80% at 0% 0%, #000 50%, transparent 90%)",
+                "radial-gradient(ellipse 80% 80% at 0% 0%, #000 40%, transparent 85%)",
             }}
           />
-          <section className="h-dvh w-dvw">
+
+          <section className="h-dvh w-full">
             <Hero />
           </section>
-          <section className="px-4 sm:px-6 md:px-10 py-20">
+
+          <section className="px-[var(--section-px)] py-[var(--section-py)]">
             <Skills />
           </section>
-          <section className="py-20">
+
+          <section className="py-[var(--section-py)]">
             <Projects />
           </section>
-          <section>
+
+          <section className="py-[var(--section-py)]">
             <About />
           </section>
-          <section>
+
+          <section className="py-[var(--section-py)]">
             <Contact />
           </section>
+
           <Footer />
         </main>
       </div>
