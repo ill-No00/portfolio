@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { spaceGrotesk } from "@/lib/fonts";
 import { useInView } from "@/hooks/use-in-view";
 import SectionHeading from "@/components/ui/section-heading";
@@ -10,6 +10,13 @@ import GlowButton from "@/components/ui/glow-button";
 export default function Contact() {
   const ref = useRef(null);
   const visible = useInView(ref);
+  const [showNotConfigured, setShowNotConfigured] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setShowNotConfigured(true);
+    setTimeout(() => setShowNotConfigured(false), 5000);
+  };
 
   return (
     <div id="contact" className="px-[var(--section-px)]">
@@ -35,7 +42,7 @@ export default function Contact() {
         {/* Right - Contact Form */}
         <form
           className="flex flex-col gap-5"
-          onSubmit={(e) => e.preventDefault()}
+          onSubmit={handleSubmit}
         >
           <div className="flex flex-col gap-2">
             <label
@@ -82,10 +89,16 @@ export default function Contact() {
             />
           </div>
 
-          <div className="mt-2">
+          <div className="mt-2 flex flex-col gap-3">
             <GlowButton type="submit" variant="primary">
               Send Message
             </GlowButton>
+            
+            {showNotConfigured && (
+              <div className="text-sm text-red-400 animate-fade-in">
+                This form is not configured yet. Please reach out via social links.
+              </div>
+            )}
           </div>
         </form>
       </div>

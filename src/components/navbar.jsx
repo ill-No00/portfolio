@@ -70,7 +70,7 @@ export default function Navbar() {
         {/* Logo */}
         <a
           href="#home"
-          className={`text-xl md:text-2xl ${spaceGrotesk.className} bg-linear-to-r from-white to-gray-400 bg-clip-text text-transparent hover:from-white hover:to-white transition-all duration-300`}
+          className={`text-lg sm:text-xl md:text-2xl ${spaceGrotesk.className} bg-linear-to-r from-white to-gray-400 bg-clip-text text-transparent hover:from-white hover:to-white transition-all duration-300`}
         >
           Ilyas<span className="text-white/30">.</span>
         </a>

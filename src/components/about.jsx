@@ -139,7 +139,7 @@ export default function About() {
 
           {/* Stats */}
           <div className="flex flex-row gap-8 mt-4 pt-4 border-t border-[var(--color-border)]">
-            <StatItem value="4+" label="Projects Built" />
+            <StatItem value="3+" label="Projects Built" />
             <div className="w-px bg-[var(--color-border)]" />
             <StatItem value="6+" label="Technologies" />
             <div className="w-px bg-[var(--color-border)]" />
