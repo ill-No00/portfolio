@@ -90,7 +90,7 @@ export default function BrowserFrame({ src, alt, accentColor, priority }) {
 
       {/* Screen/Screenshot Container */}
       <motion.div 
-        className="relative overflow-hidden bg-black/40 w-full h-auto"
+        className="relative overflow-hidden bg-black/40 w-full aspect-[16/10]"
         style={{ transform: "translateZ(5px)" }}
         whileHover={{ scale: 1.015 }}
         transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
@@ -102,15 +102,14 @@ export default function BrowserFrame({ src, alt, accentColor, priority }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="w-full h-auto"
+            className="w-full h-full"
           >
             <Image
               src={src}
               alt={alt}
-              width={0}
-              height={0}
+              fill
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 55vw"
-              className="w-full h-auto select-none pointer-events-none block"
+              className="object-cover select-none pointer-events-none"
               priority={priority}
               draggable={false}
             />

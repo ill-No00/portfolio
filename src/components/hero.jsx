@@ -58,8 +58,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Particle canvas */}
-      <div className="canvas w-full h-[40vh] md:h-full md:w-1/2 mt-8 md:mt-0 flex items-center justify-center">
+      {/* Particle canvas — hidden on tablet and mobile */}
+      <div className="canvas w-full h-[40vh] md:h-full md:w-1/2 mt-8 md:mt-0 hidden md:flex items-center justify-center">
         <ParticleSketch />
       </div>
     </div>
