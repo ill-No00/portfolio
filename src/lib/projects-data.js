@@ -5,7 +5,6 @@
  * @property {string[]} features - Key features of the project.
  * @property {string[]} technologies - Technologies used in the project.
  * @property {string} accentColor - Hex color code representing the accent color of the project.
- * @property {string[]} images - Paths to screenshots of the project.
  * @property {string} liveUrl - URL to the live demo.
  * @property {string} [codeUrl] - Optional URL to the source code repository.
  */
@@ -34,7 +33,6 @@ export const projects = [
       "Tailwind CSS",
     ],
     accentColor: "#ec4899",
-    images: ["/4wheels.png"],
     liveUrl: "#",
     codeUrl: "#",
   },
@@ -56,17 +54,6 @@ export const projects = [
       "Vanilla CSS",
     ],
     accentColor: "#d5bea8",
-    images: [
-      "/tastehub_home.png",
-      "/tastehub_detail.png",
-      "/tastehub_reserve.png",
-      "/tastehub_reviews.png",
-      "/tastehub_admin_dashboard.png",
-      "/tastehub_admin_menu.png",
-      "/tastehub_admin_reservations.png",
-      "/tastehub_admin_reviews.png",
-      "/tastehub_contact.png"
-    ],
     liveUrl: "#",
     codeUrl: "",
   },
@@ -89,7 +76,6 @@ export const projects = [
       "Supabase",
     ],
     accentColor: "#3b82f6",
-    images: ["/hireit.jpg"],
     liveUrl: "#",
     codeUrl: "#",
   },
